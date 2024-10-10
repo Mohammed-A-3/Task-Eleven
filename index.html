@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover to Hide Background Image</title>
+</head>
+<body>
+    <h1 id="title">Catch Me If You Can</h1>
+    <script>
+        const bodyElement = document.body;
+        const titleElement = document.getElementById('title');
+        bodyElement.style.backgroundImage = "url('https://images.unsplash.com/photo-1563373270-6f4a70c096b9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')";
+        bodyElement.style.backgroundSize = 'cover';
+        bodyElement.style.backgroundPosition = 'center';
+        bodyElement.style.height = '100vh';
+        bodyElement.style.margin = '0';
+        titleElement.style.position = 'absolute';
+        titleElement.style.top = '50%';
+        titleElement.style.left = '50%';
+        titleElement.style.transform = 'translate(-50%, -50%)';
+        titleElement.style.color = 'white';
+        titleElement.style.textAlign = 'center';
+        bodyElement.addEventListener('mouseover', function() {
+            bodyElement.style.backgroundImage = 'none';
+        });
+                bodyElement.addEventListener('mouseout', function() {
+            bodyElement.style.backgroundImage = "url('https://images.unsplash.com/photo-1563373270-6f4a70c096b9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"; // Show the image again
+        });
+    </script>
+</body>
+</html>
